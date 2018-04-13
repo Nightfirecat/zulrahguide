@@ -1,0 +1,239 @@
+/*** Global styles ***/
+body {
+	background-color: black;
+	font-family: Helvetica;
+	margin: 0
+}
+.column {
+	background-image: url('img/gear-guide-bkg.png');
+	color: white;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	width: 910px
+}
+footer {
+	font-size: 12px;
+	padding: 10px
+}
+
+/*** Rotation Guide styles ***/
+.column.skinny {
+	background-image: url('img/skinny-background.png');
+	width: 455px
+}
+header > a {
+	background-color: black;
+	border: 2px solid #382418;
+	color: #90c040;
+	display: inline-block;
+	padding: 7px 15px;
+	text-decoration: none
+}
+.zulrah-header {
+	background-image: url('img/zulrah-rotation-header.png');
+	height: 341px
+}
+.zulrah-header > h1 {
+	color: #ce7f24;
+	font-family:  initial;
+	font-size: 50px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	margin-top: 0;
+	padding-top: 20px;
+	text-shadow: 1px 1px 1px black
+}
+.zulrah-header > .key {
+	background-color: black;
+	border: 2px solid #382418;
+	color: #90c040;
+	padding: 6px;
+	position: relative;
+	  top: 8px;
+	  left: 48px;
+	text-align: left;
+	width: 168px
+}
+.key > ul {
+	list-style: none;
+	margin: 0;
+	padding: 0
+}
+.key > ul > li {
+	background-repeat: no-repeat;
+	line-height: 34.5px;
+	padding-left: 34px;
+	vertical-align: middle
+}
+.key .magic {
+	background-image: url('img/icon-magic.png')
+}
+.key .melee {
+	background-image: url('img/icon-melee.png')
+}
+.key .range {
+	background-image: url('img/icon-range.png')
+}
+.key .magic-first-jad {
+	background-image: url('img/icon-magicjad.png')
+}
+.key .range-first-jad {
+	background-image: url('img/icon-rangejad.png')
+}
+.intro {
+	background-image: url('img/intro-bkg.png');
+	color: black;
+	height: 200px;
+	padding: 0 15px
+}
+.intro > h2 {
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 0;
+	padding-top: 30px
+}
+.intro > .hide-intro {
+	color: red;
+	cursor: pointer;
+	text-transform: uppercase
+}
+.guide {
+	padding: 0 7px;
+	text-align: left
+}
+[class^="phase-"], [class^="pattern-"] {
+	padding: 7px 0
+}
+.guide h3 {
+	font-size: 1.5em;
+	margin: 19.9167px 0
+}
+.guide img {
+	background-color: white;
+	border: 2px solid #382418;
+	/* display: inline-block; */
+	width: 140px
+}
+.guide img.completed,
+.guide .phase-options img:hover {
+	background-color: #969696
+}
+.guide .phase-options img:hover {
+	cursor: pointer
+}
+.phase-3,
+.phase-4,
+.pattern-1,
+.pattern-2,
+.pattern-3,
+.pattern-4 {
+	display: none
+}
+.reset {
+	background: url('img/reset-bkg.png');
+	border: 0 none;
+	color: black;
+	font-family: inherit;
+	font-size: 18.7167px;
+	font-weight: bold;
+	height: 80px;
+	width: 455px
+}
+.reset:hover {
+	color: red;
+	cursor: pointer
+}
+.reset:active {
+	padding: 0
+}
+
+/*** Gear Guide styles ***/
+.gear-menu {
+	background-image: url('img/gear-guide-left-menu-bkg.png');
+	box-sizing: border-box;
+	color: #d9c27e;
+	font-size: 13px;
+	height: 325px;
+	line-height: 19px;
+	list-style-type: none;
+	margin: 0;
+	padding: 90px 0 0 50px;
+	position: absolute;
+	  left: 75px;
+	text-align: left;
+	width: 186px
+}
+.gear-menu > li {
+	cursor: pointer
+}
+.gear-content {
+	margin: 0 auto;
+	width: 379px
+}
+.gear-content::before,
+.gear-content::after {
+	content: '';
+	display: block
+}
+.gear-content::before {
+	background-image: url('img/scroll-bkg-top.png');
+	height: 36px
+}
+.gear-content::after {
+	background-image: url('img/scroll-bkg-bot.png');
+	height: 36px
+}
+.gear-content-background {
+	background-image: url('img/scroll-bkg-mid.png');
+	box-sizing: border-box;
+	padding: 0 10px;
+	width: 379px
+}
+.gear-content h1 {
+	font-family: Cinzel, serif;
+	font-size: 25px;
+	font-weight: bold;
+	text-shadow: 1px 1px #121212;
+	margin: 0 0 10px;
+	padding-top: 5px
+}
+.gear-content img {
+	height: 150px
+}
+.gear-content figure {
+	color: black;
+	font-size: 13px;
+	margin: 0;
+	padding-bottom: 30px
+}
+.gear-content figcaption {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 3px 0 6px
+}
+.price {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 3px
+}
+.price.expensive {
+	color: red
+}
+.price.affordable {
+	color: yellow
+}
+.price.cheap {
+	color: green
+}
+.gear-neck,
+.gear-body,
+.gear-legs,
+.gear-boots,
+.gear-cape,
+.gear-weapon,
+.gear-shield,
+.gear-hands {
+	display: none
+}
