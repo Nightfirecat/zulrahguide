@@ -1,7 +1,7 @@
 const CLICKABLE_IMAGES_SELECTOR = '.phase-options img',
 	GUIDE_ELEMENTS_SELECTOR = '.guide > div',
-	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu > li',
-	GEAR_ELEMENTS_SELECTOR = '.gear-content-background > div',
+	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu li',
+	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section',
 	HIDDEN_ELEMENT_STYLE = 'display: none;',
 	VISIBLE_ELEMENT_STYLE = 'display: block;';
 

@@ -12,6 +12,14 @@ body {
 	text-align: center;
 	width: 910px
 }
+header > a {
+	background-color: black;
+	border: 2px solid #382418;
+	color: #90c040;
+	display: inline-block;
+	padding: 7px 15px;
+	text-decoration: none
+}
 footer {
 	font-size: 12px;
 	padding: 10px
@@ -22,19 +30,11 @@ footer {
 	background-image: url('img/skinny-background.png');
 	width: 455px
 }
-header > a {
-	background-color: black;
-	border: 2px solid #382418;
-	color: #90c040;
-	display: inline-block;
-	padding: 7px 15px;
-	text-decoration: none
-}
 .zulrah-header {
 	background-image: url('img/zulrah-rotation-header.png');
 	height: 341px
 }
-.zulrah-header > h1 {
+.zulrah-header > h1 { /* csslint allow: qualified-headings */
 	color: #ce7f24;
 	font-family:  initial;
 	font-size: 50px;
@@ -48,11 +48,11 @@ header > a {
 	background-color: black;
 	border: 2px solid #382418;
 	color: #90c040;
+	left: 48px;
 	padding: 6px;
 	position: relative;
-	  top: 8px;
-	  left: 48px;
 	text-align: left;
+	top: 8px;
 	width: 168px
 }
 .key > ul {
@@ -87,11 +87,12 @@ header > a {
 	height: 200px;
 	padding: 0 15px
 }
-.intro > h2 {
+.intro > b {
+	display: block;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 10px;
 	margin-bottom: 0;
+	margin-top: 10px;
 	padding-top: 30px
 }
 .intro > .hide-intro {
@@ -103,20 +104,20 @@ header > a {
 	padding: 0 7px;
 	text-align: left
 }
-[class^="phase-"], [class^="pattern-"] {
+.guide > div {
 	padding: 7px 0
 }
-.guide h3 {
+.guide .pattern-header {
 	font-size: 1.5em;
+	font-weight: bold;
 	margin: 19.9167px 0
 }
 .guide img {
 	background-color: white;
 	border: 2px solid #382418;
-	/* display: inline-block; */
 	width: 140px
 }
-.guide img.completed,
+.guide .completed,
 .guide .phase-options img:hover {
 	background-color: #969696
 }
@@ -154,18 +155,21 @@ header > a {
 	background-image: url('img/gear-guide-categories-bkg.png');
 	box-sizing: border-box;
 	color: #d9c27e;
-	font-size: 13px;
 	height: 325px;
+	left: 75px;
 	line-height: 19px;
 	list-style-type: none;
 	margin: 0;
 	padding: 90px 0 0 50px;
 	position: absolute;
-	  left: 75px;
 	text-align: left;
 	width: 186px
 }
-.gear-menu > li {
+.gear-menu,
+.gear-content figure {
+	font-size: 13px
+}
+.gear-menu li {
 	cursor: pointer
 }
 .gear-content {
@@ -191,22 +195,25 @@ header > a {
 	padding: 0 10px;
 	width: 379px
 }
-.gear-content h1 {
+.gear-content h1 { /* csslint allow: qualified-headings */
 	font-family: Cinzel, serif;
 	font-size: 25px;
 	font-weight: bold;
-	text-shadow: 1px 1px #121212;
 	margin: 0 0 10px;
-	padding-top: 5px
+	padding-top: 5px;
+	text-shadow: 1px 1px #121212
 }
 .gear-content img {
 	height: 150px
 }
 .gear-content figure {
 	color: black;
-	font-size: 13px;
 	margin: 0;
 	padding-bottom: 30px
+}
+.gear-content figure > img {
+	display:block;
+	margin: 0 auto
 }
 .gear-content figcaption {
 	font-size: 20px;

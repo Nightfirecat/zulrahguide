@@ -1,0 +1,12 @@
+{
+	"ignore": [
+		"adjoining-classes",
+		"box-model",
+		"box-sizing",
+		"unique-headings"
+	],
+	"warnings": [
+	],
+	"errors": [
+	]
+}

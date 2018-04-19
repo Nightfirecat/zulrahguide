@@ -1,0 +1,15 @@
+{
+  "name": "zulrahguide",
+  "version": "0.0.0",
+  "description": "zulrahguide.com, re-created and open-sourced",
+  "bugs": "https://github.com/nightfirecat/zulrahguide/issues",
+  "license": "AGPL-3.0",
+  "author": "Jordan Atwood <jordan.atwood423@gmail.com>",
+  "repository": "git@github.com:nightfirecat/zulrahguide.git",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "csslint": "^1.0.5",
+    "eslint": "^4.19.1",
+    "w3cjs": "^0.4.0"
+  }
+}
