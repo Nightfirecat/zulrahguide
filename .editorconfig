@@ -1,7 +1,5 @@
 # EditorConfig: http://EditorConfig.org
 
-root = true
-
 # Unix-style newlines with a newline ending every file
 # Set default charset, indentation
 [*]
