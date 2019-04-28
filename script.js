@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		clickableImages = document.querySelectorAll(CLICKABLE_IMAGES_SELECTOR),
 		clickablePhaseImages = document.querySelectorAll(CLICKABLE_PHASES_SELECTOR),
 		gearGuideMenuItems = document.querySelectorAll(GEAR_MENU_ITEMS_SELECTOR);
+
 	for (const node of introHider) {
 		node.addEventListener('click', hideLinkedClasses, false);
 	}
