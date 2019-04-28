@@ -1,4 +1,5 @@
 const CLICKABLE_IMAGES_SELECTOR = '.phase-options img',
+	CLICKABLE_PHASES_SELECTOR = '.phases-completed img',
 	GUIDE_ELEMENTS_SELECTOR = '.guide > div',
 	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu li',
 	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section',
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	const introHider = document.getElementsByClassName('hide-intro'),
 		resetButton = document.getElementsByClassName('reset'),
 		clickableImages = document.querySelectorAll(CLICKABLE_IMAGES_SELECTOR),
+		clickablePhaseImages = document.querySelectorAll(CLICKABLE_PHASES_SELECTOR),
 		gearGuideMenuItems = document.querySelectorAll(GEAR_MENU_ITEMS_SELECTOR);
 	for (const node of introHider) {
 		node.addEventListener('click', hideLinkedClasses, false);
@@ -20,6 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 	for (const img of clickableImages) {
 		img.addEventListener('click', showLinkedClassNodes, false);
+	}
+	for (const img of clickablePhaseImages) {
+		img.addEventListener('click', toggleCompleted, false);
 	}
 
 	// Gear Guide click handlers
@@ -39,6 +44,7 @@ function showLinkedClassNodes() {
 	const classesToShow = this.dataset['opens'].split(' ');
 	hideAllGuideNodes();
 	hideAllGearNodes();
+	resetToggleCompleted();
 	showGuideElementsOfClassNames(classesToShow);
 }
 
@@ -83,5 +89,17 @@ function hideNode(node) {
 function showNode(node) {
 	if (node.getAttribute('style') !== VISIBLE_ELEMENT_STYLE) {
 		node.setAttribute('style', VISIBLE_ELEMENT_STYLE);
+	}
+}
+
+function toggleCompleted(event) {
+	if (event.srcElement.className !== "completed") {
+		event.srcElement.className = (event.srcElement.className == "toggle-completed") ? "" : "toggle-completed";
+	}
+}
+
+function resetToggleCompleted() {
+	for (const node of document.querySelectorAll(CLICKABLE_PHASES_SELECTOR)) {
+		node.classList.remove('toggle-completed');
 	}
 }

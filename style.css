@@ -121,6 +121,10 @@ footer {
 .guide .phase-options img:hover {
 	background-color: #969696
 }
+.guide .toggle-completed,
+.guide .phase-options img:hover {
+	background-color: #969696
+}
 .guide .phase-options img:hover {
 	cursor: pointer
 }
