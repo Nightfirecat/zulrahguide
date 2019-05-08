@@ -1,5 +1,5 @@
 const CLICKABLE_IMAGES_SELECTOR = '.phase-options img',
-	CLICKABLE_PHASES_SELECTOR = '.phases-completed img',
+	CLICKABLE_PHASES_SELECTOR = '.pattern img',
 	GUIDE_ELEMENTS_SELECTOR = '.guide > div',
 	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu li',
 	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section',
@@ -94,8 +94,8 @@ function showNode(node) {
 }
 
 function toggleCompleted(event) {
-	if (event.srcElement.className !== "completed") {
-		event.srcElement.className = (event.srcElement.className == "toggle-completed") ? "" : "toggle-completed";
+	if (!event.srcElement.classList.contains("completed")) {
+		event.srcElement.classList.toggle("toggle-completed")
 	}
 }
 
