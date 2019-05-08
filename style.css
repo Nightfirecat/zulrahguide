@@ -121,9 +121,6 @@ footer {
 .guide .phase-options img:hover {
 	background-color: #969696
 }
-.guide .toggle-completed {
-	background-color: green;
-}
 .guide .phase-options img:hover {
 	cursor: pointer
 }
@@ -246,4 +243,15 @@ footer {
 .gear-shield,
 .gear-hands {
 	display: none
+}
+
+/*** JS toggle classes ***/
+.toggle-hidden {
+	display: none;
+}
+.toggle-visible {
+	display: block;
+}
+.guide .toggle-completed {
+	background-color: green;
 }

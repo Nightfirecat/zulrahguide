@@ -2,9 +2,7 @@ const CLICKABLE_IMAGES_SELECTOR = '.phase-options img',
 	CLICKABLE_PHASES_SELECTOR = '.pattern img',
 	GUIDE_ELEMENTS_SELECTOR = '.guide > div',
 	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu li',
-	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section',
-	HIDDEN_ELEMENT_STYLE = 'display: none;',
-	VISIBLE_ELEMENT_STYLE = 'display: block;';
+	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section';
 
 // Add click handlers to intro hider, clickable images, reset button
 document.addEventListener('DOMContentLoaded', function() {
@@ -82,15 +80,13 @@ function hideNodesOfSelector(selector) {
 }
 
 function hideNode(node) {
-	if (node.getAttribute('style') !== HIDDEN_ELEMENT_STYLE) {
-		node.setAttribute('style', HIDDEN_ELEMENT_STYLE);
-	}
+	node.classList.add('toggle-hidden');
+	node.classList.remove('toggle-visible');
 }
 
 function showNode(node) {
-	if (node.getAttribute('style') !== VISIBLE_ELEMENT_STYLE) {
-		node.setAttribute('style', VISIBLE_ELEMENT_STYLE);
-	}
+	node.classList.remove('toggle-hidden');
+	node.classList.add('toggle-visible');
 }
 
 function toggleCompleted(event) {
