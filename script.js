@@ -1,17 +1,19 @@
-const CLICKABLE_IMAGES_SELECTOR = '.phase-options img',
-	CLICKABLE_PHASES_SELECTOR = '.pattern img',
-	GUIDE_ELEMENTS_SELECTOR = '.guide > div',
-	GEAR_MENU_ITEMS_SELECTOR = '.gear-menu li',
-	GEAR_ELEMENTS_SELECTOR = '.gear-content-background section';
+const SELECTORS = {
+	phaseOptionImages: '.phase-options img',
+	clickablePhases: '.pattern img',
+	guideElements: '.guide > div',
+	gearMenuItems: '.gear-menu li',
+	gearElements: '.gear-content-background section',
+};
 
 // Add click handlers to intro hider, clickable images, reset button
 document.addEventListener('DOMContentLoaded', function() {
 	// Rotation Guide click handlers
 	const introHider = document.getElementsByClassName('hide-intro'),
 		resetButton = document.getElementsByClassName('reset'),
-		clickableImages = document.querySelectorAll(CLICKABLE_IMAGES_SELECTOR),
-		clickablePhaseImages = document.querySelectorAll(CLICKABLE_PHASES_SELECTOR),
-		gearGuideMenuItems = document.querySelectorAll(GEAR_MENU_ITEMS_SELECTOR);
+		phaseOptionImages = document.querySelectorAll(SELECTORS.phaseOptionImages),
+		clickablePhaseImages = document.querySelectorAll(SELECTORS.clickablePhases),
+		gearGuideMenuItems = document.querySelectorAll(SELECTORS.gearMenuItems);
 
 	for (const node of introHider) {
 		node.addEventListener('click', hideLinkedClasses, false);
@@ -19,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	for (const node of resetButton) {
 		node.addEventListener('click', showLinkedClassNodes, false);
 	}
-	for (const img of clickableImages) {
+	for (const img of phaseOptionImages) {
 		img.addEventListener('click', showLinkedClassNodes, false);
 	}
 	for (const img of clickablePhaseImages) {
@@ -60,11 +62,11 @@ function showGuideElementsOfClassName(className) {
 }
 
 function hideAllGuideNodes() {
-	hideNodesOfSelector(GUIDE_ELEMENTS_SELECTOR);
+	hideNodesOfSelector(SELECTORS.guideElements);
 }
 
 function hideAllGearNodes() {
-	hideNodesOfSelector(GEAR_ELEMENTS_SELECTOR);
+	hideNodesOfSelector(SELECTORS.gearElements);
 }
 
 function hideElementsOfClassName(className) {
@@ -96,7 +98,7 @@ function toggleCompleted(event) {
 }
 
 function resetToggleCompleted() {
-	for (const node of document.querySelectorAll(CLICKABLE_PHASES_SELECTOR)) {
+	for (const node of document.querySelectorAll(SELECTORS.clickablePhases)) {
 		node.classList.remove('toggle-completed');
 	}
 }
