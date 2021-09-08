@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		gearGuideMenuItems = document.querySelectorAll(SELECTORS.gearMenuItems),
 		guideImages = document.querySelectorAll(SELECTORS.guideImages);
 
+	document.addEventListener('keydown', keyDownHandler, false);
+
 	for (const node of introHider) {
 		node.addEventListener('click', hideLinkedClasses, false);
 	}
@@ -47,7 +49,11 @@ function hideLinkedClasses() {
 }
 
 function showLinkedClassNodes() {
-	const classesToShow = this.dataset['opens'].split(' ');
+	showLinkedClassNodesOfElement(this);
+}
+
+function showLinkedClassNodesOfElement(el) {
+	const classesToShow = el.dataset['opens'].split(' ');
 	hideAllGuideNodes();
 	hideAllGearNodes();
 	resetToggleCompleted();
@@ -110,4 +116,56 @@ function resetToggleCompleted() {
 
 function cancelDrag(e) {
 	e.preventDefault();
+}
+
+function keyDownHandler(e) {
+	const guideElements = document.getElementsByClassName('guide');
+	if (guideElements.length) {
+		guideKeyDown(e, guideElements.item(0));
+	}
+}
+
+function guideKeyDown(e, guideElement) {
+	switch (e.key) {
+		case '1':
+		case '2':
+		case '3':
+		case '4':
+		case '5':
+		case '6':
+		case '7':
+		case '8':
+		case '9': {
+			const allPhases = guideElement.querySelectorAll(SELECTORS.phaseOptionImages);
+			const visiblePhases = [];
+
+			for (const phase of allPhases) {
+				if (isRendered(phase)) {
+					visiblePhases.push(phase);
+				}
+			}
+
+			const numberPressed = parseInt(e.key, 10);
+
+			if (numberPressed > visiblePhases.length) {
+				break;
+			}
+
+			const indexPressed = numberPressed - 1;
+			showLinkedClassNodesOfElement(visiblePhases[indexPressed]);
+			break;
+		}
+		case 'r':
+		case 'R': {
+			const resetButton = document.getElementsByClassName('reset');
+			for (const button of resetButton) {
+				showLinkedClassNodesOfElement(button);
+			}
+			break;
+		}
+	}
+}
+
+function isRendered(el) {
+	return !!(el.offsetWidth || el.offsetHeight || el.getClientRects().length);
 }

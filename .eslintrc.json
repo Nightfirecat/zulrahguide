@@ -15,7 +15,8 @@
 				"CallExpression": {
 					"arguments": "first"
 				},
-				"VariableDeclarator": 1
+				"VariableDeclarator": 1,
+				"SwitchCase": 1
 			}
 		],
 		"linebreak-style": [
