@@ -102,7 +102,11 @@ footer {
 }
 .guide {
 	padding: 0 7px;
-	text-align: left
+	text-align: left;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	user-select: none
 }
 .guide > div {
 	padding: 7px 0

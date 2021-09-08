@@ -1,6 +1,7 @@
 const SELECTORS = {
 	phaseOptionImages: '.phase-options img',
 	clickablePhases: '.pattern img',
+	guideImages: '.guide img',
 	guideElements: '.guide > div',
 	gearMenuItems: '.gear-menu li',
 	gearElements: '.gear-content-background section',
@@ -13,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
 		resetButton = document.getElementsByClassName('reset'),
 		phaseOptionImages = document.querySelectorAll(SELECTORS.phaseOptionImages),
 		clickablePhaseImages = document.querySelectorAll(SELECTORS.clickablePhases),
-		gearGuideMenuItems = document.querySelectorAll(SELECTORS.gearMenuItems);
+		gearGuideMenuItems = document.querySelectorAll(SELECTORS.gearMenuItems),
+		guideImages = document.querySelectorAll(SELECTORS.guideImages);
 
 	for (const node of introHider) {
 		node.addEventListener('click', hideLinkedClasses, false);
@@ -22,10 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
 		node.addEventListener('click', showLinkedClassNodes, false);
 	}
 	for (const img of phaseOptionImages) {
-		img.addEventListener('click', showLinkedClassNodes, false);
+		img.addEventListener('mousedown', showLinkedClassNodes, false);
 	}
 	for (const img of clickablePhaseImages) {
-		img.addEventListener('click', toggleCompleted, false);
+		img.addEventListener('mousedown', toggleCompleted, false);
+	}
+	for (const img of guideImages) {
+		img.addEventListener('dragstart', cancelDrag, false);
 	}
 
 	// Gear Guide click handlers
@@ -101,4 +106,8 @@ function resetToggleCompleted() {
 	for (const node of document.querySelectorAll(SELECTORS.clickablePhases)) {
 		node.classList.remove('toggle-completed');
 	}
+}
+
+function cancelDrag(e) {
+	e.preventDefault();
 }
