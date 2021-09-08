@@ -12,13 +12,14 @@ for browser display; simply pointing your browser at `index.html` or any of the 
 will be the same [as visiting the GitHub page for this
 project](https://nightfirecat.github.io/zulrahguide/).
 
-With that said, this project uses [Yarn](https://yarnpkg.com) for development dependency versioning
-and within the CI script for test execution. Running said tests (for compliance against the
-project's [EditorConfig](https://editorconfig.org/), [csslint](https://github.com/CSSLint/csslint),
-and [eslint](https://github.com/eslint/eslint) rules and validating the HTML) is as simple as
+With that said, this project uses [npm](https://www.npmjs.com/) for development dependency
+versioning and within the CI script for test execution. Running said tests (for compliance against
+the project's
+[EditorConfig](https://editorconfig.org/), [csslint](https://github.com/CSSLint/csslint), and
+[eslint](https://github.com/eslint/eslint) rules and validating the HTML) is as simple as
 installing said dependencies and running the bash script in the `.travis` directory.
 
 ```sh
-yarn install
+npm i
 .travis/test.sh
 ```
