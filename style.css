@@ -2,7 +2,7 @@
 body {
 	background-color: black;
 	font-family: Helvetica;
-	margin: 0
+	margin: 0;
 }
 .column {
 	background-image: url('img/gear-guide-bkg.png');
@@ -10,7 +10,7 @@ body {
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
-	width: 910px
+	width: 910px;
 }
 header > a {
 	background-color: black;
@@ -18,21 +18,21 @@ header > a {
 	color: #90c040;
 	display: inline-block;
 	padding: 7px 15px;
-	text-decoration: none
+	text-decoration: none;
 }
 footer {
 	font-size: 12px;
-	padding: 10px
+	padding: 10px;
 }
 
 /*** Rotation Guide styles ***/
 .column.skinny {
 	background-image: url('img/skinny-background.png');
-	width: 455px
+	width: 455px;
 }
 .zulrah-header {
 	background-image: url('img/zulrah-rotation-header.png');
-	height: 341px
+	height: 341px;
 }
 .zulrah-header > h1 { /* csslint allow: qualified-headings */
 	color: #ce7f24;
@@ -42,7 +42,7 @@ footer {
 	margin-bottom: 20px;
 	margin-top: 0;
 	padding-top: 20px;
-	text-shadow: 1px 1px 1px black
+	text-shadow: 1px 1px 1px black;
 }
 .zulrah-header > .key {
 	background-color: black;
@@ -53,39 +53,39 @@ footer {
 	position: relative;
 	text-align: left;
 	top: 8px;
-	width: 168px
+	width: 168px;
 }
 .key > ul {
 	list-style: none;
 	margin: 0;
-	padding: 0
+	padding: 0;
 }
 .key > ul > li {
 	background-repeat: no-repeat;
 	line-height: 34.5px;
 	padding-left: 34px;
-	vertical-align: middle
+	vertical-align: middle;
 }
 .key .magic {
-	background-image: url('img/icon-magic.png')
+	background-image: url('img/icon-magic.png');
 }
 .key .melee {
-	background-image: url('img/icon-melee.png')
+	background-image: url('img/icon-melee.png');
 }
 .key .range {
-	background-image: url('img/icon-range.png')
+	background-image: url('img/icon-range.png');
 }
 .key .magic-first-jad {
-	background-image: url('img/icon-magicjad.png')
+	background-image: url('img/icon-magicjad.png');
 }
 .key .range-first-jad {
-	background-image: url('img/icon-rangejad.png')
+	background-image: url('img/icon-rangejad.png');
 }
 .intro {
 	background-image: url('img/intro-bkg.png');
 	color: black;
 	height: 200px;
-	padding: 0 15px
+	padding: 0 15px;
 }
 .intro > b {
 	display: block;
@@ -93,12 +93,12 @@ footer {
 	font-weight: bold;
 	margin-bottom: 0;
 	margin-top: 10px;
-	padding-top: 30px
+	padding-top: 30px;
 }
 .intro > .hide-intro {
 	color: red;
 	cursor: pointer;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 .guide {
 	padding: 0 7px;
@@ -106,27 +106,27 @@ footer {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	-webkit-user-select: none;
-	user-select: none
+	user-select: none;
 }
 .guide > div {
-	padding: 7px 0
+	padding: 7px 0;
 }
 .guide .pattern-header {
 	font-size: 1.5em;
 	font-weight: bold;
-	margin: 19.9167px 0
+	margin: 19.9167px 0;
 }
 .guide img {
 	background-color: white;
 	border: 2px solid #382418;
-	width: 140px
+	width: 140px;
 }
 .guide .completed,
 .guide .phase-options img:hover {
-	background-color: #969696
+	background-color: #969696;
 }
 .guide .phase-options img:hover {
-	cursor: pointer
+	cursor: pointer;
 }
 .phase-3,
 .phase-4,
@@ -134,7 +134,7 @@ footer {
 .pattern-2,
 .pattern-3,
 .pattern-4 {
-	display: none
+	display: none;
 }
 .reset {
 	background: url('img/reset-bkg.png');
@@ -144,14 +144,14 @@ footer {
 	font-size: 18.7167px;
 	font-weight: bold;
 	height: 80px;
-	width: 455px
+	width: 455px;
 }
 .reset:hover {
 	color: red;
-	cursor: pointer
+	cursor: pointer;
 }
 .reset:active {
-	padding: 0
+	padding: 0;
 }
 
 /*** Gear Guide styles ***/
@@ -167,37 +167,37 @@ footer {
 	padding: 90px 0 0 50px;
 	position: absolute;
 	text-align: left;
-	width: 186px
+	width: 186px;
 }
 .gear-menu,
 .gear-content figure {
-	font-size: 13px
+	font-size: 13px;
 }
 .gear-menu li {
-	cursor: pointer
+	cursor: pointer;
 }
 .gear-content {
 	margin: 0 auto;
-	width: 379px
+	width: 379px;
 }
 .gear-content::before,
 .gear-content::after {
 	content: '';
-	display: block
+	display: block;
 }
 .gear-content::before {
 	background-image: url('img/scroll-bkg-top.png');
-	height: 36px
+	height: 36px;
 }
 .gear-content::after {
 	background-image: url('img/scroll-bkg-bot.png');
-	height: 36px
+	height: 36px;
 }
 .gear-content-background {
 	background-image: url('img/scroll-bkg-mid.png');
 	box-sizing: border-box;
 	padding: 0 10px;
-	width: 379px
+	width: 379px;
 }
 .gear-content h1 { /* csslint allow: qualified-headings */
 	font-family: Cinzel, serif;
@@ -205,38 +205,38 @@ footer {
 	font-weight: bold;
 	margin: 0 0 10px;
 	padding-top: 5px;
-	text-shadow: 1px 1px #121212
+	text-shadow: 1px 1px #121212;
 }
 .gear-content img {
-	height: 150px
+	height: 150px;
 }
 .gear-content figure {
 	color: black;
 	margin: 0;
-	padding-bottom: 30px
+	padding-bottom: 30px;
 }
 .gear-content figure > img {
 	display:block;
-	margin: 0 auto
+	margin: 0 auto;
 }
 .gear-content figcaption {
 	font-size: 20px;
 	font-weight: bold;
-	margin: 3px 0 6px
+	margin: 3px 0 6px;
 }
 .price {
 	font-size: 16px;
 	font-weight: bold;
-	margin-bottom: 3px
+	margin-bottom: 3px;
 }
 .price.expensive {
-	color: red
+	color: red;
 }
 .price.affordable {
-	color: yellow
+	color: yellow;
 }
 .price.cheap {
-	color: green
+	color: green;
 }
 .gear-neck,
 .gear-body,
@@ -246,7 +246,7 @@ footer {
 .gear-weapon,
 .gear-shield,
 .gear-hands {
-	display: none
+	display: none;
 }
 
 /*** JS toggle classes ***/
