@@ -20,6 +20,6 @@ the project's
 installing said dependencies and running the bash script in the `.travis` directory.
 
 ```sh
-npm i
-.travis/test.sh
+npm ci
+./ci/lint.sh
 ```
