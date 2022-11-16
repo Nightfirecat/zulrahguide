@@ -155,6 +155,10 @@ footer {
 }
 
 /*** Gear Guide styles ***/
+.gear-navigation {
+	position: sticky;
+	top: 10px;
+}
 .gear-menu {
 	background-image: url('img/gear-guide-categories-bkg.png');
 	box-sizing: border-box;
