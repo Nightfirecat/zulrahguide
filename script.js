@@ -76,7 +76,7 @@ function hideAllGuideNodes() {
 	hideNodesOfSelector(SELECTORS.guideElements);
 }
 
-function advanceGuidePhaseHandler(e) {
+function advanceGuidePhaseHandler() {
 	advanceGuidePhase(this);
 }
 
