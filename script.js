@@ -6,6 +6,7 @@ const SELECTORS = {
 	gearMenuItems: '.gear-menu li',
 	gearElements: '.gear-content-background section',
 };
+const clickablePhaseToggle = 'toggle-completed';
 
 // Add click handlers to intro hider, clickable images, reset button
 document.addEventListener('DOMContentLoaded', function() {
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		img.addEventListener('mousedown', advanceGuidePhaseHandler, false);
 	}
 	for (const img of clickablePhaseImages) {
-		img.addEventListener('mousedown', toggleCompleted, false);
+		img.addEventListener('mousedown', toggleCompletedHandler, false);
 	}
 	for (const img of guideImages) {
 		img.addEventListener('dragstart', cancelDrag, false);
@@ -115,15 +116,34 @@ function showNode(node) {
 	node.classList.add('toggle-visible');
 }
 
-function toggleCompleted(event) {
-	if (!event.srcElement.classList.contains('completed')) {
-		event.srcElement.classList.toggle('toggle-completed');
+function toggleCompletedHandler(event) {
+	toggleCompleted(event.srcElement);
+}
+
+function toggleCompleted(targetElement) {
+	if (!targetElement) {
+		return;
 	}
+
+	setCompleted(targetElement, !targetElement.classList.contains(clickablePhaseToggle));
+
+}
+
+function setCompleted(targetElement, completed) {
+	if (!targetElement || targetElement.classList.contains('completed')) {
+		return;
+	}
+
+	const addedToggleClass = targetElement.classList.toggle(clickablePhaseToggle, completed);
+	const nextElement = addedToggleClass
+		? targetElement.previousElementSibling
+		: targetElement.nextElementSibling;
+	setCompleted(nextElement, addedToggleClass);
 }
 
 function resetToggleCompleted() {
 	for (const node of document.querySelectorAll(SELECTORS.clickablePhases)) {
-		node.classList.remove('toggle-completed');
+		node.classList.remove(clickablePhaseToggle);
 	}
 }
 
