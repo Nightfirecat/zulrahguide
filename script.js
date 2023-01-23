@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		node.addEventListener('click', showLinkedClassNodes, false);
 	}
 	for (const img of phaseOptionImages) {
-		img.addEventListener('mousedown', advanceGuidePhase, false);
+		img.addEventListener('mousedown', advanceGuidePhaseHandler, false);
 	}
 	for (const img of clickablePhaseImages) {
 		img.addEventListener('mousedown', toggleCompleted, false);
