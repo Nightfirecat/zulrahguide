@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		node.addEventListener('click', showLinkedClassNodes, false);
 	}
 	for (const img of phaseOptionImages) {
-		img.addEventListener('mousedown', showLinkedClassNodes, false);
+		img.addEventListener('mousedown', advanceGuidePhase, false);
 	}
 	for (const img of clickablePhaseImages) {
 		img.addEventListener('mousedown', toggleCompleted, false);
@@ -74,6 +74,19 @@ function showGuideElementsOfClassName(className) {
 
 function hideAllGuideNodes() {
 	hideNodesOfSelector(SELECTORS.guideElements);
+}
+
+function advanceGuidePhaseHandler(e) {
+	advanceGuidePhase(this);
+}
+
+function advanceGuidePhase(el) {
+	showLinkedClassNodesOfElement(el);
+	window.scrollTo({
+		left: 0,
+		top: document.body.scrollHeight,
+		behavior: 'smooth',
+	});
 }
 
 function hideAllGearNodes() {
@@ -152,7 +165,7 @@ function guideKeyDown(e, guideElement) {
 			}
 
 			const indexPressed = numberPressed - 1;
-			showLinkedClassNodesOfElement(visiblePhases[indexPressed]);
+			advanceGuidePhase(visiblePhases[indexPressed]);
 			break;
 		}
 		case 'r':
