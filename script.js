@@ -188,6 +188,22 @@ function guideKeyDown(e, guideElement) {
 			advanceGuidePhase(visiblePhases[indexPressed]);
 			break;
 		}
+		case ' ': {
+			const clickablePhases = document.querySelectorAll(SELECTORS.clickablePhases);
+			for (let i = 0; i < clickablePhases.length; i++) {
+				const currentItem = clickablePhases.item(i);
+				if (!isRendered(currentItem)
+					|| currentItem.classList.contains('completed')
+					|| currentItem.classList.contains(clickablePhaseToggle)) {
+					continue;
+				}
+
+				toggleCompleted(currentItem);
+				e.preventDefault();
+				break;
+			}
+			break;
+		}
 		case 'r':
 		case 'R': {
 			const resetButton = document.getElementsByClassName('reset');
