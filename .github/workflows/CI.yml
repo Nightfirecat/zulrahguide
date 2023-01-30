@@ -18,5 +18,8 @@ jobs:
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@1.1.0
 
+      - name: Install npm dependencies
+        run: npm ci
+
       - name: Lint
         run: ./ci/lint.sh
