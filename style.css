@@ -1,7 +1,7 @@
 /*** Global styles ***/
 body {
 	background-color: black;
-	font-family: Helvetica;
+	font-family: Helvetica, sans-serif;
 	margin: 0;
 }
 .column {
@@ -36,7 +36,7 @@ footer {
 }
 .zulrah-header > h1 { /* csslint allow: qualified-headings */
 	color: #ce7f24;
-	font-family:  initial;
+	font-family: initial;
 	font-size: 50px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -103,9 +103,6 @@ footer {
 .guide {
 	padding: 0 7px;
 	text-align: left;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-user-select: none;
 	user-select: none;
 }
 .guide > div {
@@ -220,7 +217,7 @@ footer {
 	padding-bottom: 30px;
 }
 .gear-content figure > img {
-	display:block;
+	display: block;
 	margin: 0 auto;
 }
 .gear-content figcaption {

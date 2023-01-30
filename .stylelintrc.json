@@ -1,0 +1,9 @@
+{
+	"extends": "stylelint-config-standard",
+	"rules": {
+		"indentation": "tab",
+		"no-descending-specificity": null,
+		"rule-empty-line-before": null,
+		"string-quotes": "single"
+	}
+}
